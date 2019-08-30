@@ -1,0 +1,86 @@
+<div class="animated fadeIn">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-align-justify"></i>Clients
+              </div>
+              <div class="card-body">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Action </th>
+                      <th>Asset Code</th>
+                      <th>Description</th>
+                      <th>Image</th>
+                      <th>UOM</th>
+                      <th>Inspection Type</th>
+                      <th>Expected Result</th>
+                      <th>Observation </th>
+                      <th>is Repairable?</th>
+                      <th>in Knowledge Tree?</th>
+                      <th>Know Tree Status</th>
+                      <th>Featured Image</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr role="row" *ngFor="let asset of assets">
+                      <td>
+                        <input type="checkbox" name="bulk_select" class="multi-select" id="39012"
+                          value="39012">&nbsp;&nbsp;&nbsp;
+                        <a class="text-primary" href="http://arresto.in/connect/karam/kare/manage_kare/edit_assets/39012">
+                          <span class="glyphicon glyphicon-pencil"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="http://arresto.in/connect/karam/kare/manage_kare/delete_component/39012"
+                          class="text-danger delete"><span class="glyphicon glyphicon-trash"></span></a>
+                      </td>
+        
+                      <td>{{ asset.component_code}}</td>
+                      <td>{{ asset.component_description}}</td>
+                      <td>
+                        {{asset.component_image}}
+                      </td>
+                      <td>
+                          {{asset.component_uom}}
+                      </td>
+                      <td>
+                          {{asset.component_inspectiontype}}
+                      </td>
+                      <td>
+                       {{asset.component_expectedresult}}
+                      <td>
+                        {{asset.component_observation}}
+                      </td>
+                      <td>
+                          {{asset.component_repair}}
+                      </td>
+                      <td>
+                          {{asset.infonet_status}}
+                      </td>
+                      <td>
+                          {{asset.status}}
+                      </td>
+                      <td>
+                        <a href="http://arresto.in/connect/manage_kare/upload_featured_images?type=asset&amp;id=39012">Featured
+                          Image</a> </td>
+                    </tr>
+        
+        
+                  </tbody>
+                </table>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--/.col-->
+        </div>
+        <!--/.row-->
+        </div>
