@@ -10,21 +10,21 @@
                   <thead>
                     <tr>
                       <th>Action </th>
-                      <th>Asset Code</th>
-                      <th>Description</th>
-                      <th>Image</th>
-                      <th>UOM</th>
-                      <th>Inspection Type</th>
-                      <th>Expected Result</th>
-                      <th>Observation </th>
-                      <th>is Repairable?</th>
-                      <th>in Knowledge Tree?</th>
-                      <th>Know Tree Status</th>
-                      <th>Featured Image</th>
+                      <th>job Card Number</th>
+                      <th>SMS Number</th>
+                      <th>Asset Series </th>
+                      <th>Asset</th>
+                      <th>Batch Number</th>
+                      <th>Serial Number</th>
+                      <th>RFID Number</th>
+                      <th>Bar Code</th>
+                      <th>UIN</th>
+                      <th>Client</th>
+                      <th>Status</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr role="row" *ngFor="let asset of assets">
+                    <tr role="row" *ngFor="let mdata of mdataSet">
                       <td>
                         <input type="checkbox" name="bulk_select" class="multi-select" id="39012"
                           value="39012">&nbsp;&nbsp;&nbsp;
@@ -34,34 +34,34 @@
                           class="text-danger delete"><span class="glyphicon glyphicon-trash"></span></a>
                       </td>
         
-                      <td>{{ asset.component_code}}</td>
-                      <td>{{ asset.component_description}}</td>
+                      <td>{{ mdata.mdata_jobcard}}</td>
+                      <td>{{ mdata.mdata_sms}}</td>
                       <td>
-                        {{asset.component_image}}
+                        {{mdata.mdata_item_series}}
                       </td>
                       <td>
-                          {{asset.component_uom}}
+                          {{mdata.mdata_asset}}
                       </td>
                       <td>
-                          {{asset.component_inspectiontype}}
+                          {{mdata.mdata_batch}}
                       </td>
                       <td>
-                       {{asset.component_expectedresult}}
+                       {{mdata.mdata_serial}}
                       <td>
-                        {{asset.component_observation}}
+                        {{mdata.mdata_rfid}}
                       </td>
                       <td>
-                          {{asset.component_repair}}
+                          {{mdata.mdata_barcode}}
                       </td>
                       <td>
-                          {{asset.infonet_status}}
+                          {{mdata.mdata_uin}}
                       </td>
                       <td>
-                          {{asset.status}}
+                          {{mdata.mdata_client}}
                       </td>
                       <td>
-                        <a href="http://arresto.in/connect/manage_kare/upload_featured_images?type=asset&amp;id=39012">Featured
-                          Image</a> </td>
+                          {{mdata.status}} 
+                      </td>
                     </tr>
         
         

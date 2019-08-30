@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MdataService } from '../../../services/mdata.service';
 
 @Component({
   selector: 'app-mdata',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MdataComponent implements OnInit {
 
-  constructor() { }
+  private mdataSet;
+
+  constructor(private service:MdataService) { }
 
   ngOnInit() {
+    this.service.getAll()
+    .subscribe(response=>{
+      this.mdataSet=response;
+      console.log(response);
+    })
   }
 
 }

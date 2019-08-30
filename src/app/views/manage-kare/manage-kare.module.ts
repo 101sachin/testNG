@@ -9,15 +9,21 @@ import { ClientsComponent } from './clients/clients.component';
 import { SiteidsComponent } from './siteids/siteids.component';
 import { MdataComponent } from './mdata/mdata.component';
 import { CommonModule } from '@angular/common';
+import { MdataService } from '../../services/mdata.service';
+import { ClientService } from '../../services/clients.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    ManageKareRoutingModule],
-  declarations: [ManageKareComponent, 
+    ManageKareRoutingModule
+  ],
+
+  declarations: [
+    ManageKareComponent, 
     AssetsComponent,
     SubAssetsComponent, AssetSeriesComponent,
-    SmsComponent, ClientsComponent, SiteidsComponent, MdataComponent]
-  //providers: [AuthService]
+    SmsComponent, ClientsComponent, SiteidsComponent,
+    MdataComponent],
+    providers: [MdataService,ClientService]
 })
 export class ManageKareModule {}
