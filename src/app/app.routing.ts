@@ -87,8 +87,8 @@ export const routes: Routes = [
       {
         path: "buttons",
         loadChildren: () =>
-          import("./views/manage-kare/manage-kare.module").then(
-            m => m.ManageKareModule
+          import("./views/buttons/buttons.module").then(
+            m => m.ButtonsModule
           )
       },
       {
