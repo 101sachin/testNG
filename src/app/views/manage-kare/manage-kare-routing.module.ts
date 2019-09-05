@@ -1,13 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { SubAssetsComponent } from "./sub-assets.component";
-import { AssetsComponent } from "./assets.component";
+import { SubAssetsComponent } from "./sub-assets/sub-assets.component";
+import { AssetsComponent } from "./assets/assets.component";
 import { AssetSeriesComponent } from './asset-series/asset-series.component';
 import { ClientsComponent } from './clients/clients.component';
 import { SmsComponent } from './sms/sms.component';
 import { MdataComponent } from './mdata/mdata.component';
 import { SiteidsComponent } from './siteids/siteids.component';
+import { AssetAddComponent } from './assets/asset-add.component';
+import { AssetsXlsComponent } from './assets/assets-xls.component';
 
 const routes: Routes = [
   {
@@ -19,6 +21,14 @@ const routes: Routes = [
       {
         path: "assets",
         component: AssetsComponent
+      },
+      {
+        path: "assets/add",
+        component: AssetAddComponent
+      },
+      {
+        path: "assets/upload-xls",
+        component: AssetsXlsComponent
       },
       {
         path: "sub-assets",
