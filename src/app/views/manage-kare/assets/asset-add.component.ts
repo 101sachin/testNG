@@ -15,4 +15,12 @@ export class AssetAddComponent implements OnInit  {
 
     }
 
+    onClick(){
+        alert('click event trigger');
+    }
+
+    onSubmit(){
+        alert('on submit trigger');
+    }
+
 }

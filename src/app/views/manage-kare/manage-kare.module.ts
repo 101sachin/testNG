@@ -13,18 +13,22 @@ import { MdataService } from '../../services/mdata.service';
 import { ClientService } from '../../services/clients.service';
 import { AssetAddComponent } from './assets/asset-add.component';
 import { AssetsXlsComponent } from './assets/assets-xls.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     ManageKareRoutingModule
   ],
 
   declarations: [
     ManageKareComponent, 
     AssetsComponent,
-    SubAssetsComponent, AssetSeriesComponent,
-    SmsComponent, ClientsComponent, 
+    SubAssetsComponent, 
+    AssetSeriesComponent,
+    SmsComponent,
+    ClientsComponent, 
     SiteidsComponent,
     MdataComponent,
     AssetAddComponent,
